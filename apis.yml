@@ -5,8 +5,8 @@ apis:
   - aid: ational-council-on-disability:ational-council-on-disability
     name: National Council on Disability
     tags:
-      - Federal Government
       - Disabilities
+      - Federal Government
     humanURL: https://www.ncd.gov
     properties:
       - url: https://www.ncd.gov
@@ -17,8 +17,8 @@ apis:
       website of the ...
 name: National Council on Disability
 tags:
-  - Federal Government
   - Disability
+  - Federal Government
 type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
