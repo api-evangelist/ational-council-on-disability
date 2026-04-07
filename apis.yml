@@ -26,15 +26,12 @@ created: '2024-12-03'
 modified: '2025-02-24'
 position: Consuming
 description: >-
-  The National Council on Disability (NCD) is an independent federal agency that
-  advises the President, Congress, and other federal agencies on disability
-  policy and programs. The NCD works to promote equal opportunity, economic
-  self-sufficiency, independent living, and full participation in all areas of
-  society for individuals with disabilities. They conduct research, gather
-  information, and provide recommendations to improve policies, programs, and
-  services that impact people with disabilities. The NCD also works to raise
-  awareness and educate the public about disability issues and advocate for the
-  rights and inclusion of individuals with disabilities in society.
+  The National Council on Disability (NCD) is an independent federal agency that advises
+  the President, Congress, and other federal agencies on disability policy and programs.
+  The NCD works to promote equal opportunity, economic self-sufficiency, independent
+  living, and full participation in all areas of society for individuals with disabilities.
+  They conduct research, gather information, and provide recommendations to improve
+  policies, programs, and services that impact people with disabilities.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
