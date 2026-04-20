@@ -1,7 +1,9 @@
-# National Council on Disability (ational-council-on-disability)
+# National Council on Disability (national-council-on-disability)
 The National Council on Disability (NCD) is an independent federal agency that advises the President, Congress, and other federal agencies on disability policy and programs. Established in 1978, the NCD promotes equal opportunity, economic self-sufficiency, independent living, and full participation in all areas of society for individuals with disabilities. The agency conducts research, gathers information, and provides recommendations to improve policies, programs, and services. NCD publishes policy reports spanning civil rights, healthcare, transportation, employment, housing, and emergency management for people with disabilities.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/ational-council-on-disability/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/ational-council-on-disability/refs/heads/main/apis.yml)
+**URL:** [https://www.ncd.gov](https://www.ncd.gov)
+
+**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
 
 ## Tags:
 
@@ -66,7 +68,7 @@ Performance, accountability, and budget data from the National Council on Disabi
 - [JSONSchema](json-schema/ncd-stakeholder-letter-schema.json)
 - [Website](https://www.ncd.gov)
 - [Documentation](https://www.ncd.gov/reports/)
-- [FOIA](https://www.ncd.gov/foia/)
+- [DataAPI](https://www.ncd.gov/foia/)
 - [Contact](https://www.ncd.gov/contact/)
 - [PrivacyPolicy](https://www.ncd.gov/privacy-policy/)
 - [Newsroom](https://www.ncd.gov/newsroom/)
@@ -100,6 +102,14 @@ Performance, accountability, and budget data from the National Council on Disabi
 | data.gov | Federal government open data portal where related disability datasets from agencies like SSA, HHS, and DOL are cataloged and made available for download. |
 | USASpending.gov | NCD federal spending data is publicly accessible through USASpending.gov as part of federal transparency requirements. |
 
+## Solutions
+
+| Name | Description |
+|------|-------------|
+| Disability Policy Leadership | NCD provides independent policy analysis and recommendations to the three branches of government on all matters affecting people with disabilities. |
+| Federal Agency Accountability | NCD monitors federal agency compliance with disability rights laws and makes recommendations for program improvements and new legislation. |
+| Public Education | NCD publishes toolkits, fact sheets, and reports to educate the public and policymakers about disability rights and best practices for inclusion. |
+
 ## Artifacts
 
 Machine-readable data schemas organized by format.
@@ -123,6 +133,14 @@ Machine-readable data schemas organized by format.
 ### JSON-LD
 
 - [NCD Context](json-ld/ncd-context.jsonld)
+
+### Examples
+
+- [NCD Policy Report Example](examples/ncd-policy-report-example.json)
+- [NCD FOIA Record Example](examples/ncd-foia-record-example.json)
+- [NCD Accountability Report Example](examples/ncd-accountability-report-example.json)
+- [NCD Testimony Example](examples/ncd-testimony-example.json)
+- [NCD Stakeholder Letter Example](examples/ncd-stakeholder-letter-example.json)
 
 ## Vocabulary
 
