@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "$id": "https://schemas.ncd.gov/structure/foia-record",
+  "title": "NCD FOIA Record",
+  "description": "A record available through the National Council on Disability's FOIA e-Library.",
+  "type": "object",
+  "properties": {
+    "recordType": {
+      "type": "string",
+      "description": "Type of FOIA record",
+      "enum": [
+        "Bylaws",
+        "PerformanceReport",
+        "BudgetJustification",
+        "FinancialAudit",
+        "StrategicPlan",
+        "StakeholderLetter",
+        "PolicyReport",
+        "FOIAReport"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "Document title"
+    },
+    "fiscalYear": {
+      "type": "string",
+      "description": "Fiscal year of the record (e.g., FY2025)"
+    },
+    "publishedDate": {
+      "type": "string",
+      "description": "Date published to FOIA library"
+    },
+    "documentURL": {
+      "type": "string",
+      "description": "URL to access the document"
+    },
+    "format": {
+      "type": "string",
+      "description": "Document format",
+      "enum": [
+        "PDF",
+        "XML",
+        "CSV",
+        "ZIP"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the record contents"
+    }
+  }
+}

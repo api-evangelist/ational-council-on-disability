@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ncd.gov/schemas/policy-report",
+  "title": "NCD Policy Report",
+  "description": "A policy report published by the National Council on Disability containing recommendations to the President, Congress, or federal agencies.",
+  "type": "object",
+  "required": [
+    "title",
+    "publicationDate",
+    "policyArea"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Full title of the NCD policy report"
+    },
+    "publicationDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the report was published"
+    },
+    "policyArea": {
+      "type": "string",
+      "enum": [
+        "Civil Rights",
+        "Healthcare",
+        "Transportation",
+        "Employment",
+        "Housing",
+        "Financial Assistance",
+        "Emergency Management",
+        "Education",
+        "Technology",
+        "International"
+      ],
+      "description": "Primary policy area covered by the report"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Executive summary or abstract of the report"
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of policy recommendations made in the report"
+    },
+    "documentURL": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to download the full report"
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "PDF",
+        "HTML",
+        "Word"
+      ],
+      "description": "Document file format"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1984,
+      "description": "Publication year"
+    }
+  }
+}

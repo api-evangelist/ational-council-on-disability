@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ncd.gov/schemas/stakeholder-letter",
+  "title": "NCD Stakeholder Letter",
+  "description": "A formal letter from the National Council on Disability to a federal agency, congressional leader, or other government stakeholder.",
+  "type": "object",
+  "required": [
+    "title",
+    "date",
+    "recipient"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Letter title or subject"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the letter was sent"
+    },
+    "recipient": {
+      "type": "string",
+      "description": "Name or office of the letter recipient"
+    },
+    "recipientAgency": {
+      "type": "string",
+      "description": "Federal agency or organization of the recipient"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject matter of the letter"
+    },
+    "policyArea": {
+      "type": "string",
+      "description": "Primary disability policy area addressed"
+    },
+    "documentURL": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the full letter document"
+    }
+  }
+}

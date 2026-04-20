@@ -1,0 +1,254 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "National Council on Disability"
+  description: "Unified taxonomy of National Council on Disability data resources spanning policy reports, FOIA records, accountability data, congressional testimony, and stakeholder communications."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  dataResources:
+    - namespace: ncd-policy-reports
+      name: NCD Policy Reports
+      baseUrl: https://www.ncd.gov/reports/
+      status: active
+      format: HTML
+      description: Archive of NCD policy reports from 1984 to present
+    - namespace: ncd-foia-library
+      name: NCD FOIA e-Library
+      baseUrl: https://www.ncd.gov/foia/
+      status: active
+      format: PDF, XML, CSV, ZIP
+      description: Proactively published FOIA documents including bylaws, audits, and performance reports
+    - namespace: ncd-accountability
+      name: NCD Accountability Reports
+      baseUrl: https://www.ncd.gov/accountability/
+      status: active
+      format: PDF
+      description: Annual performance reports, budget justifications, and financial audits
+
+  resources:
+    - name: policy-report
+      description: NCD policy report with recommendations
+      keyProperties:
+        - title
+        - publicationDate
+        - policyArea
+        - recommendations
+        - documentURL
+    - name: foia-record
+      description: Document available in NCD FOIA e-Library
+      keyProperties:
+        - recordType
+        - title
+        - fiscalYear
+        - format
+        - documentURL
+    - name: accountability-report
+      description: Annual performance and budget accountability report
+      keyProperties:
+        - reportType
+        - fiscalYear
+        - agencyBudget
+        - performanceGoals
+        - performanceResults
+    - name: testimony
+      description: Congressional testimony on disability policy
+      keyProperties:
+        - title
+        - date
+        - committee
+        - chamber
+        - policyArea
+    - name: stakeholder-letter
+      description: Formal letter to a federal agency or government stakeholder
+      keyProperties:
+        - title
+        - date
+        - recipient
+        - recipientAgency
+        - policyArea
+
+  schemas:
+    documents:
+      - name: PolicyReport
+        description: NCD policy report with recommendations to government
+        properties:
+          - title
+          - publicationDate
+          - policyArea
+          - summary
+          - recommendations
+          - documentURL
+          - format
+          - year
+      - name: FOIARecord
+        description: Document in NCD FOIA e-Library
+        properties:
+          - recordType
+          - title
+          - fiscalYear
+          - publishedDate
+          - documentURL
+          - format
+      - name: AccountabilityReport
+        description: Performance and accountability report
+        properties:
+          - reportType
+          - fiscalYear
+          - title
+          - agencyBudget
+          - performanceGoals
+          - performanceResults
+      - name: Testimony
+        description: Congressional testimony
+        properties:
+          - title
+          - date
+          - committee
+          - chamber
+          - subject
+          - policyArea
+      - name: StakeholderLetter
+        description: Letter to federal stakeholders
+        properties:
+          - title
+          - date
+          - recipient
+          - recipientAgency
+          - policyArea
+
+  enums:
+    policy-areas:
+      - Civil Rights
+      - Healthcare
+      - Transportation
+      - Employment
+      - Housing
+      - Financial Assistance
+      - Emergency Management
+      - Education
+      - Technology
+      - International
+    record-types:
+      - Bylaws
+      - PerformanceReport
+      - BudgetJustification
+      - FinancialAudit
+      - StrategicPlan
+      - StakeholderLetter
+      - PolicyReport
+      - FOIAReport
+    report-types:
+      - AnnualPerformanceReport
+      - CongressionalBudgetJustification
+      - FinancialAudit
+      - StrategicPlan
+    document-formats:
+      - PDF
+      - XML
+      - CSV
+      - ZIP
+      - HTML
+      - Word
+    chambers:
+      - Senate
+      - House
+      - Joint
+
+  classifications:
+    foia-exemptions:
+      - description: Records exempt from FOIA disclosure under standard government exemptions
+        exemptions:
+          - 5 USC 552(b)(2) - Internal personnel rules
+          - 5 USC 552(b)(5) - Deliberative process privilege
+          - 5 USC 552(b)(6) - Personal privacy
+    disability-rights-laws:
+      - name: Americans with Disabilities Act
+        abbreviation: ADA
+        enactedYear: 1990
+      - name: Rehabilitation Act
+        section: "504"
+        enactedYear: 1973
+      - name: Individuals with Disabilities Education Act
+        abbreviation: IDEA
+        enactedYear: 1990
+      - name: Olmstead Act
+        enactedYear: 1999
+
+capability:
+  workflows: []
+
+  personas:
+    - id: policy-researcher
+      name: Policy Researcher
+      description: "Researcher accessing NCD reports and recommendations for disability policy analysis"
+    - id: federal-agency-staff
+      name: Federal Agency Staff
+      description: "Federal agency staff using NCD recommendations to guide program development"
+    - id: disability-advocate
+      name: Disability Advocate
+      description: "Advocate using NCD data to support disability rights litigation and legislative campaigns"
+    - id: congressional-staff
+      name: Congressional Staff
+      description: "Congressional staff accessing NCD testimony and policy letters for legislative drafting"
+    - id: foia-requester
+      name: FOIA Requester
+      description: "Individual or organization requesting NCD documents through FOIA channels"
+
+  domains:
+    - name: Disability Policy
+      description: Policy recommendations on rights, services, and programs for people with disabilities
+      resources:
+        - policy-report
+        - testimony
+        - stakeholder-letter
+    - name: Government Accountability
+      description: Agency performance, budget, and financial transparency
+      resources:
+        - accountability-report
+        - foia-record
+    - name: Civil Rights
+      description: Disability civil rights law and enforcement
+      relatedPolicyAreas:
+        - Civil Rights
+        - Employment
+        - Housing
+    - name: Healthcare
+      description: Health policy for people with disabilities
+      relatedPolicyAreas:
+        - Healthcare
+    - name: Independent Living
+      description: Programs and policies supporting independent living for people with disabilities
+      relatedPolicyAreas:
+        - Housing
+        - Transportation
+        - Financial Assistance
+
+crossReference:
+  - resource: policy-report
+    policyAreas:
+      - Civil Rights
+      - Healthcare
+      - Transportation
+      - Employment
+      - Housing
+    personas:
+      - Policy Researcher
+      - Disability Advocate
+      - Congressional Staff
+  - resource: foia-record
+    recordTypes:
+      - PerformanceReport
+      - BudgetJustification
+      - FinancialAudit
+    personas:
+      - FOIA Requester
+      - Policy Researcher
+  - resource: testimony
+    chambers:
+      - Senate
+      - House
+    personas:
+      - Congressional Staff
+      - Policy Researcher

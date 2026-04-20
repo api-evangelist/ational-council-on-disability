@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://www.ncd.gov/vocab/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "gov": "https://www.w3.org/ns/gov#",
+    "title": "schema:name",
+    "publicationDate": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    },
+    "policyArea": "https://www.ncd.gov/vocab/policyArea",
+    "summary": "schema:abstract",
+    "recommendations": "https://www.ncd.gov/vocab/recommendation",
+    "documentURL": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "fiscalYear": "https://www.ncd.gov/vocab/fiscalYear",
+    "recordType": "https://www.ncd.gov/vocab/recordType",
+    "reportType": "https://www.ncd.gov/vocab/reportType",
+    "committee": "https://www.ncd.gov/vocab/committee",
+    "chamber": "https://www.ncd.gov/vocab/chamber",
+    "recipient": "https://www.ncd.gov/vocab/recipient",
+    "recipientAgency": "https://www.ncd.gov/vocab/recipientAgency",
+    "agencyBudget": {
+      "@id": "https://www.ncd.gov/vocab/agencyBudget",
+      "@type": "xsd:decimal"
+    },
+    "publishedDate": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    },
+    "date": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:date"
+    },
+    "format": "schema:encodingFormat",
+    "year": {
+      "@id": "schema:copyrightYear",
+      "@type": "xsd:integer"
+    }
+  }
+}

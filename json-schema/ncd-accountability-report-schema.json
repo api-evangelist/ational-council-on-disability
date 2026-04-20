@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ncd.gov/schemas/accountability-report",
+  "title": "NCD Accountability Report",
+  "description": "Annual performance and accountability report from the National Council on Disability.",
+  "type": "object",
+  "required": [
+    "reportType",
+    "fiscalYear"
+  ],
+  "properties": {
+    "reportType": {
+      "type": "string",
+      "enum": [
+        "AnnualPerformanceReport",
+        "CongressionalBudgetJustification",
+        "FinancialAudit",
+        "StrategicPlan"
+      ],
+      "description": "Type of accountability report"
+    },
+    "fiscalYear": {
+      "type": "string",
+      "description": "Fiscal year covered by the report"
+    },
+    "title": {
+      "type": "string",
+      "description": "Full report title"
+    },
+    "agencyBudget": {
+      "type": "number",
+      "description": "Total agency budget in dollars for the fiscal year"
+    },
+    "performanceGoals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of performance goals for the period"
+    },
+    "performanceResults": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Results achieved against performance goals"
+    },
+    "documentURL": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to download the full report"
+    },
+    "publishedDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the report was published"
+    }
+  }
+}

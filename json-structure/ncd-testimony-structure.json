@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "$id": "https://schemas.ncd.gov/structure/testimony",
+  "title": "NCD Congressional Testimony",
+  "description": "Congressional testimony submitted by the National Council on Disability on disability policy matters.",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the testimony"
+    },
+    "date": {
+      "type": "string",
+      "description": "Date testimony was delivered"
+    },
+    "committee": {
+      "type": "string",
+      "description": "Congressional committee before which testimony was delivered"
+    },
+    "chamber": {
+      "type": "string",
+      "description": "Congressional chamber",
+      "enum": [
+        "Senate",
+        "House",
+        "Joint"
+      ]
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject matter of the testimony"
+    },
+    "policyArea": {
+      "type": "string",
+      "description": "Primary disability policy area addressed"
+    },
+    "documentURL": {
+      "type": "string",
+      "description": "URL to the full testimony document"
+    }
+  }
+}

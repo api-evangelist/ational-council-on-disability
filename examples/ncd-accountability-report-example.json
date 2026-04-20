@@ -1,0 +1,10 @@
+{
+  "reportType": "AnnualPerformanceReport",
+  "fiscalYear": "example_fiscalYear",
+  "title": "example_title",
+  "agencyBudget": 12500000.0,
+  "performanceGoals": [],
+  "performanceResults": [],
+  "documentURL": "https://www.ncd.gov/reports/ncd-accountability-report",
+  "publishedDate": "2026-04-19"
+}
